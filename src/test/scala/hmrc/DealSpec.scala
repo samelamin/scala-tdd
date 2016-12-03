@@ -19,5 +19,16 @@ class DealSpec extends FeatureSpec with GivenWhenThen {
       Then("the total price is £1.20")
       assert(totalPrice == 0.6)
     }
+
+    scenario("3 for 2 oranges") {
+      Given("a basket with three oranges")
+      val basket = new Basket(List(Orange(), Orange(), Orange()))
+
+      When("calculating the price")
+      val totalPrice = Checkout.calculatePriceAfterDiscount(basket)
+
+      Then("the total price is £0.50")
+      assert(totalPrice == 0.5)
+    }
   }
 }
