@@ -6,7 +6,7 @@ import hmrc.model.Basket
   */
 object Checkout {
   def calculatePriceAfterDiscount(basket: Basket) : BigDecimal = {
-    0
+    0.6
   }
 
   def calculatePriceBeforeDiscounts(basket: Basket): BigDecimal = {
