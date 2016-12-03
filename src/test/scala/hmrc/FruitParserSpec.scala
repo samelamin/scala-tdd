@@ -3,7 +3,6 @@ package hmrc
 import hmrc.model.{Apple, FruitParser, Orange}
 import org.scalatest.{FeatureSpec, GivenWhenThen}
 import org.scalatest.Matchers._
-
 /**
   * Created by sam.elamin on 03/12/2016.
   */

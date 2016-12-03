@@ -2,7 +2,6 @@ package hmrc
 
 import hmrc.model.{Basket, FruitParser}
 import hmrc.service.Checkout
-
 /**
   * Created by sam.elamin on 03/12/2016.
   */
