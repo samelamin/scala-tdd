@@ -31,6 +31,17 @@ class CheckoutSpec extends FeatureSpec with GivenWhenThen {
       totalPrice should equal(0.6)
     }
 
+    scenario("Basket with an orange") {
+      Given("A basket with an orange")
+      val Basket = new Basket(List("Orange"))
+
+      When("Calculating the total price")
+      val totalPrice = Checkout.calculatePrice(Basket)
+
+      Then("The total price should be 0.25")
+      totalPrice should equal(0.25)
+    }
+
 
   }
 }
