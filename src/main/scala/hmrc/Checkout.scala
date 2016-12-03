@@ -6,6 +6,13 @@ import model.Basket
   */
 object Checkout {
   def calculatePrice(basket: Basket): BigDecimal = {
-    0
+    if(basket.strings.contains("Apple"))
+      {
+        0.6
+      }
+    else
+      {
+        0
+      }
   }
 }
