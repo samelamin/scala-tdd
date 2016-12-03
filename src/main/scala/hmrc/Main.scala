@@ -11,7 +11,7 @@ object Main {
     val input = args(0)
     val items = FruitParser.parseFruits(input)
     val basket = new Basket(items)
-    val basketPrice = Checkout.calculatePrice(basket)
+    val basketPrice = Checkout.calculatePriceBeforeDiscounts(basket)
     println(s"£$basketPrice")
   }
 }

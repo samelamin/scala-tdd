@@ -14,7 +14,7 @@ class CheckoutSpec extends FeatureSpec with GivenWhenThen {
       val Basket = new Basket(List())
 
       When("Calculating the total price")
-      val totalPrice = Checkout.calculatePrice(Basket)
+      val totalPrice = Checkout.calculatePriceBeforeDiscounts(Basket)
 
       Then("The total price should be 0")
       totalPrice should equal(0)
@@ -25,7 +25,7 @@ class CheckoutSpec extends FeatureSpec with GivenWhenThen {
       val Basket = new Basket(List(Apple()))
 
       When("Calculating the total price")
-      val totalPrice = Checkout.calculatePrice(Basket)
+      val totalPrice = Checkout.calculatePriceBeforeDiscounts(Basket)
 
       Then("The total price should be 0.6")
       totalPrice should equal(0.6)
@@ -36,7 +36,7 @@ class CheckoutSpec extends FeatureSpec with GivenWhenThen {
       val Basket = new Basket(List(Orange()))
 
       When("Calculating the total price")
-      val totalPrice = Checkout.calculatePrice(Basket)
+      val totalPrice = Checkout.calculatePriceBeforeDiscounts(Basket)
 
       Then("The total price should be 0.25")
       totalPrice should equal(0.25)
@@ -47,7 +47,7 @@ class CheckoutSpec extends FeatureSpec with GivenWhenThen {
       val Basket = new Basket(List(Apple(),Apple(),Apple(),Orange()))
 
       When("Calculating the total price")
-      val totalPrice = Checkout.calculatePrice(Basket)
+      val totalPrice = Checkout.calculatePriceBeforeDiscounts(Basket)
 
       Then("The total price should be 2.05")
       totalPrice should equal(2.05)
